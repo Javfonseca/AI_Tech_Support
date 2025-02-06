@@ -189,8 +189,10 @@
   </footer>
   
   <script>
-    // URL de la API Lambda, reemplaza esta URL con la de tu endpoint real.
-    const LAMBDA_API_URL = "https://tu-api-lambda-url.com/endpoint";
+    // URL de la API Lambda
+    const LAMBDA_API_URL = "https://l2ciy1fu7b.execute-api.us-east-1.amazonaws.com/default/vsas_assistant_at";
+
+    const phoneNumber = "573165865467";
 
     // Selecciona los elementos del DOM para el chat
     const chatMessages = document.getElementById('chat-messages');
@@ -202,8 +204,7 @@
       const msgDiv = document.createElement('div');
       msgDiv.innerHTML = '<strong>' + sender + ':</strong> ' + text;
       chatMessages.appendChild(msgDiv);
-      // Mueve el scroll al final para ver el mensaje nuevo
-      chatMessages.scrollTop = chatMessages.scrollHeight;
+      chatMessages.scrollTop = chatMessages.scrollHeight; // Mueve el scroll al final
     }
 
     // Función para enviar mensaje a la API Lambda
@@ -221,7 +222,10 @@
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ query: message })
+          body: JSON.stringify({ 
+            phone_number: phoneNumber, 
+            text: message 
+          })
         });
 
         if (!response.ok) {
@@ -229,8 +233,8 @@
         }
 
         const data = await response.json();
-        // Se asume que la respuesta de la API contiene una propiedad "respuesta"
-        appendMessage('Asistente', data.respuesta);
+        // La API responde con {"response": "Texto de respuesta"}
+        appendMessage('Asistente', data.response || 'No se recibió respuesta del asistente.');
       } catch (error) {
         appendMessage('Asistente', 'Error al conectar con el asistente. Inténtalo de nuevo.');
         console.error('Error:', error);
@@ -245,5 +249,6 @@
       }
     });
   </script>
+
 </body>
 </html>
