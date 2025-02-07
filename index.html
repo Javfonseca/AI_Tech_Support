@@ -202,10 +202,13 @@
     // Función para agregar mensajes al chat
     function appendMessage(sender, text) {
       const msgDiv = document.createElement('div');
-      msgDiv.innerHTML = '<strong>' + sender + ':</strong> ' + text;
+      // Reemplaza los saltos de línea por <br>
+      const formattedText = text.replace(/\n/g, '<br>');
+      msgDiv.innerHTML = '<strong>' + sender + ':</strong> ' + formattedText;
       chatMessages.appendChild(msgDiv);
       chatMessages.scrollTop = chatMessages.scrollHeight; // Mueve el scroll al final
     }
+    
 
     // Función para enviar mensaje a la API Lambda
     async function sendMessage() {
