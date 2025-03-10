@@ -249,12 +249,12 @@
           const data = await response.json();
           appendMessage(
             "Asistente",
-            data.response || `No se recibió respuesta de ${assistantName}.`
+            data.response || `No se recibió respuesta.`
           );
         } catch (error) {
           appendMessage(
             "Asistente",
-            `Error al conectar con el asistente ${assistantName}.`
+            `Error al conectar con el asistente.`
           );
         }
       }
