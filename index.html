@@ -1,257 +1,270 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Nombre de la Empresa - Soluciones Industriales</title>
-  <style>
-    /* Estilos Globales */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    a {
-      text-decoration: none;
-    }
-    
-    /* Encabezado */
-    header {
-      background-color: #003366;
-      color: #fff;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header .logo {
-      display: flex;
-      align-items: center;
-    }
-    header .logo img {
-      height: 200px;
-      margin-right: 40px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    nav ul li {
-      margin-left: 20px;
-    }
-    nav ul li a {
-      color: #fff;
-      font-weight: bold;
-    }
-    
-    /* Sección Hero */
-    .hero {
-      background: url('img/Background.jpg') no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-      font-size: 36px;
-      font-weight: bold;
-    }
-    
-    /* Contenido Principal */
-    .content {
-      padding: 40px;
-      max-width: 1200px;
-      margin: -50px auto 0 auto;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      position: relative;
-      z-index: 2;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    .section h2 {
-      color: #003366;
-      margin-bottom: 10px;
-    }
-    .section p {
-      line-height: 1.6;
-    }
-    .section img {
-      width: 100%;
-      margin-top: 20px;
-      border-radius: 8px;
-    }
-    
-    /* Chat Demo */
-    #chat-container {
-      width: 100%;
-      max-width: 400px;
-      height: 600px;
-      border: 1px solid #ccc;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-    }
-    #chat-messages {
-      flex: 1;
-      padding: 10px;
-      overflow-y: auto;
-      border-bottom: 1px solid #ccc;
-    }
-    #chat-input {
-      display: flex;
-    }
-    #chat-input input {
-      flex: 1;
-      padding: 10px;
-      border: none;
-      outline: none;
-    }
-    #chat-input button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #007BFF;
-      color: #fff;
-      cursor: pointer;
-    }
-    #chat-input button:hover {
-      background-color: #0056b3;
-    }
-    
-    /* Pie de Página */
-    footer {
-      background-color: #003366;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-  <!-- Encabezado con Logotipo y Menú -->
-  <header>
-    <div class="logo">
-      <img src="img/Company_Logo.jpg" alt="Logo de la Empresa">
-      <h1>Impulsando la industria por medio de tecnología de IA</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <!-- Sección Hero con Imagen de Fondo -->
-  <div class="hero">
-    Soluciones Industriales Innovadoras
-  </div>
-  
-  <!-- Contenido Principal -->
-  <div class="content">
-    <!-- Sección de Descripción -->
-    <div class="section">
-      <h2>Integración del Asistente Técnico</h2>
-      <p>
-        Nuestro asistente técnico basado en inteligencia artificial está diseñado para optimizar procesos industriales y ofrecer soporte en tiempo real. Con una integración sencilla, su sitio web podrá brindar atención personalizada a clientes y operarios.
-      </p>
-      <!-- Imagen adicional en la sección -->
-      <img src="img/Bacckground_1.jpg" alt="Imagen Industrial Adicional">
-    </div>
-    
-    <!-- Sección Demo del Chat -->
-    <div class="section">
-      <h2>Demo en Vivo</h2>
-      <div id="chat-container">
-        <div id="chat-messages"></div>
-        <div id="chat-input">
-          <input type="text" id="message" placeholder="Escribe tu mensaje...">
-          <button id="send">Enviar</button>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nombre de la Empresa - Soluciones Industriales</title>
+    <style>
+      /* Estilos Globales */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      /* Encabezado */
+      header {
+        background-color: #003366;
+        color: #fff;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      header .logo {
+        display: flex;
+        align-items: center;
+      }
+      header .logo img {
+        height: 200px;
+        margin-right: 40px;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav ul li {
+        margin-left: 20px;
+      }
+      nav ul li a {
+        color: #fff;
+        font-weight: bold;
+      }
+
+      /* Sección Hero */
+      .hero {
+        background: url("img/Background.jpg") no-repeat center center/cover;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        font-size: 36px;
+        font-weight: bold;
+      }
+
+      /* Contenido Principal */
+      .content {
+        padding: 40px;
+        max-width: 1200px;
+        margin: -50px auto 0 auto;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        position: relative;
+        z-index: 2;
+      }
+      .section {
+        margin-bottom: 40px;
+      }
+      .section h2 {
+        color: #003366;
+        margin-bottom: 10px;
+      }
+      .section p {
+        line-height: 1.6;
+      }
+      .section img {
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+
+      /* Chat Demo */
+      #chat-container {
+        width: 100%;
+        max-width: 400px;
+        height: 600px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+      }
+      #chat-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        border-bottom: 1px solid #ccc;
+      }
+      #chat-input {
+        display: flex;
+      }
+      #chat-input input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+      }
+      #chat-input button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+      }
+      #chat-input button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Pie de Página */
+      footer {
+        background-color: #003366;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Encabezado con Logotipo y Menú -->
+    <header>
+      <div class="logo">
+        <img src="img/Company_Logo.jpg" alt="Logo de la Empresa" />
+        <h1>Impulsando la industria por medio de tecnología de IA</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sección Hero con Imagen de Fondo -->
+    <div class="hero">Soluciones Industriales Innovadoras</div>
+
+    <!-- Contenido Principal -->
+    <div class="content">
+      <!-- Sección de Descripción -->
+      <div class="section">
+        <h2>Integración del Asistente Técnico</h2>
+        <p>
+          Nuestro asistente técnico basado en inteligencia artificial está
+          diseñado para optimizar procesos industriales y ofrecer soporte en
+          tiempo real. Con una integración sencilla, su sitio web podrá brindar
+          atención personalizada a clientes y operarios.
+        </p>
+        <!-- Imagen adicional en la sección -->
+        <img src="img/Bacckground_1.jpg" alt="Imagen Industrial Adicional" />
+      </div>
+
+      <!-- Selector de Asistente -->
+      <div class="section">
+        <h2>Seleccionar Asistente</h2>
+        <label for="assistant">Selecciona un asistente:</label>
+        <select id="assistant">
+          <option value="0">Asistente 1</option>
+          <option value="1">Asistente 2</option>
+          <option value="2">Asistente 3</option>
+        </select>
+      </div>
+
+      <!-- Sección Demo del Chat -->
+      <div class="section">
+        <h2>Demo en Vivo</h2>
+        <div id="chat-container">
+          <div id="chat-messages"></div>
+          <div id="chat-input">
+            <input
+              type="text"
+              id="message"
+              placeholder="Escribe tu mensaje..."
+            />
+            <button id="send">Enviar</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Pie de Página -->
-  <footer>
-    &copy; 2025 The Demo Company - Todos los derechos reservados.
-  </footer>
-  
-  <script>
-    // URL de la API Lambda
-    const LAMBDA_API_URL = "https://l2ciy1fu7b.execute-api.us-east-1.amazonaws.com/default/vsas_assistant_at";
 
-    const phoneNumber = "573165865467";
+    <!-- Pie de Página -->
+    <footer>
+      &copy; 2025 The Demo Company - Todos los derechos reservados.
+    </footer>
 
-    // Selecciona los elementos del DOM para el chat
-    const chatMessages = document.getElementById('chat-messages');
-    const messageInput = document.getElementById('message');
-    const sendButton = document.getElementById('send');
+    <script>
+      // URL de la API Lambda
+      const LAMBDA_API_URL =
+        "https://l2ciy1fu7b.execute-api.us-east-1.amazonaws.com/default/vsas_assistant_at";
 
-    // Función para agregar mensajes al chat
-    function appendMessage(sender, text) {
-      const msgDiv = document.createElement('div');
-      // Reemplaza los saltos de línea por <br>
-      const formattedText = text.replace(/\n/g, '<br>');
-      msgDiv.innerHTML = '<strong>' + sender + ':</strong> ' + formattedText;
-      chatMessages.appendChild(msgDiv);
-      chatMessages.scrollTop = chatMessages.scrollHeight; // Mueve el scroll al final
-    }
-    
+      const phoneNumber = "573165865467";
 
-    // Función para enviar mensaje a la API Lambda
-    async function sendMessage() {
-      const message = messageInput.value.trim();
-      if (!message) return; // No envía si el mensaje está vacío
+      const chatMessages = document.getElementById("chat-messages");
+      const messageInput = document.getElementById("message");
+      const sendButton = document.getElementById("send");
+      const assistantSelector = document.getElementById("assistant-selector");
 
-      // Muestra el mensaje del usuario en el chat
-      appendMessage('Usuario', message);
-      messageInput.value = '';
+      function appendMessage(sender, text) {
+        const msgDiv = document.createElement("div");
+        const formattedText = text.replace(/\n/g, "<br>");
+        msgDiv.innerHTML = "<strong>" + sender + ":</strong> " + formattedText;
+        chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
 
-      try {
-        const response = await fetch(LAMBDA_API_URL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ 
-            phone_number: phoneNumber, 
-            text: message 
-          })
-        });
+      const assistantSelect = document.getElementById("assistant");
 
-        if (!response.ok) {
-          throw new Error('Error en la respuesta de la API');
+      async function sendMessage() {
+        const message = messageInput.value.trim();
+        if (!message) return;
+
+        appendMessage("Usuario", message);
+        messageInput.value = "";
+
+        const assistantIndex = assistantSelect.value;
+
+        try {
+          const response = await fetch(LAMBDA_API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              phone_number: phoneNumber,
+              text: message,
+              assistant_index: assistantIndex,
+            }),
+          });
+
+          const data = await response.json();
+          appendMessage(
+            "Asistente",
+            data.response || `No se recibió respuesta de ${assistantName}.`
+          );
+        } catch (error) {
+          appendMessage(
+            "Asistente",
+            `Error al conectar con el asistente ${assistantName}.`
+          );
         }
-
-        const data = await response.json();
-        // La API responde con {"response": "Texto de respuesta"}
-        appendMessage('Asistente', data.response || 'No se recibió respuesta del asistente.');
-      } catch (error) {
-        appendMessage('Asistente', 'Error al conectar con el asistente. Inténtalo de nuevo.');
-        console.error('Error:', error);
       }
-    }
 
-    // Eventos para el botón y la tecla Enter
-    sendButton.addEventListener('click', sendMessage);
-    messageInput.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter') {
-        sendMessage();
-      }
-    });
-  </script>
-
-</body>
+      sendButton.addEventListener("click", sendMessage);
+      messageInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          sendMessage();
+        }
+      });
+    </script>
+  </body>
 </html>
